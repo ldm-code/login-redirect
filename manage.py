@@ -1,4 +1,5 @@
 from flask import Flask,request,render_template
+import json
 from werkzeug.security import generate_password_hash,check_password_hash
 app=Flask(__name__)
 @app.route('/')
@@ -16,6 +17,17 @@ def menu():
                 msg='preencha todos os campos'
                 return render_template('login.html',msg=msg)
         else:
-          return render_template('return.html',nome=nome,senha=senha)
+            dados={'nome':nome,
+               'senha':hashed_password
+               }
+            try:
+               with open('dados/logs.json','r') as arq:
+                      lista=json.load(arq)
+            except FileNotFoundError:
+                 lista=[]
+            lista.append(dados)
+            with open('dados/logs.json','w') as arq:
+                   json.dump(lista,arq,indent=4)
+            return render_template('return.html',nome=nome)
 if __name__=='__main__':
         app.run(debug=True)
