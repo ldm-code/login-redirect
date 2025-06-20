@@ -15,5 +15,6 @@ p{
 button{
           color: brown;
           border-color: aquamarine;
+          border: 2px solid aquamarine;
           background-color:dodgerblue;
 }
