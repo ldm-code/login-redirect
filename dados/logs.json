@@ -1,10 +1,1 @@
-[
-    {
-        "nome": "alvaro",
-        "senha": "scrypt:32768:8:1$qODl9w78qL7d3Ucz$ebe16307ceb892b46232447c86a1e84cc87d1bb04ddafa15f2a34615761268913981848f8babd437fc2c2983341ab7c725948e8167cd6b10e8f4cd44b3c33844"
-    },
-    {
-        "nome": "jose",
-        "senha": "scrypt:32768:8:1$4sNd3ZFzeRea0BGU$5f7ce050d44f523266b6ef714e84eae462761268d768cec6d511e9a62077c28fd339c2f459242aa02bc4a7c29a97a4363d96cbf49544905645760fb002178456"
-    }
-]
+[]
